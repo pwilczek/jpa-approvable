@@ -4,14 +4,15 @@ import javax.persistence.*;
 
 @Entity
 @Table(name = "request_action")
+@Inheritance(strategy = InheritanceType.JOINED)
 public class RequestAction {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
+    protected Long id;
 
     @Embedded
-    private RequestDetail requestDetail;
+    protected RequestDetail requestDetail;
 
 
 }
