@@ -12,6 +12,6 @@ import java.util.Set;
 @Table(name = "approvable_request")
 public class ApprovableRequest extends  Request{
 
-    @OneToMany(mappedBy = "id")
+    @OneToMany(mappedBy = "request")
     private Set<ApprovableRequestAction>requestActions = new HashSet();
 }

@@ -1,5 +1,6 @@
 package name.wilu.requestaction;
 
+import name.wilu.request.ApprovableRequest;
 import name.wilu.workflow.Approvable;
 
 import javax.persistence.*;
@@ -10,9 +11,12 @@ public class ApprovableRequestAction extends RequestAction {
 
     @Enumerated(EnumType.STRING)
     @Column(nullable = false)
-    private ActionType type;
+    private ActionType action;
 
     @OneToOne
     private Approvable approvable;
+
+    @ManyToOne
+    private ApprovableRequest request;
 
 }

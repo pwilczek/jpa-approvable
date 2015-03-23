@@ -27,4 +27,5 @@ public class EntityManagerTest {
     public void shouldInjectPersistenceContext() throws PropertyVetoException, SQLException {
         assertNotNull(em);
     }
+    
 }
