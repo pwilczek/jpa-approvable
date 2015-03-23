@@ -10,5 +10,8 @@ public class RequestAction {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
+    @Embedded
+    private RequestDetail requestDetail;
+
 
 }
