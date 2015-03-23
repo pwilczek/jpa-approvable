@@ -19,4 +19,15 @@ public class ApprovableRequestAction extends RequestAction {
     @ManyToOne
     private ApprovableRequest request;
 
+    public void setApprovable(Approvable approvable) {
+        this.approvable = approvable;
+    }
+
+    public void setRequest(ApprovableRequest request) {
+        this.request = request;
+    }
+
+    public void setAction(ActionType action) {
+        this.action = action;
+    }
 }

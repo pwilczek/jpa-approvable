@@ -13,5 +13,7 @@ public class Approvable {
     @Column(nullable = false)
     private boolean active;
 
-
+    public void setActive(boolean active) {
+        this.active = active;
+    }
 }

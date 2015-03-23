@@ -16,5 +16,7 @@ public class RequestAction {
     @Embedded
     protected RequestDetail requestDetail;
 
-
+    public void setRequestDetail(RequestDetail requestDetail) {
+        this.requestDetail = requestDetail;
+    }
 }

@@ -14,4 +14,9 @@ public class ApprovableRequest extends  Request{
 
     @OneToMany(mappedBy = "request")
     private Set<ApprovableRequestAction>requestActions = new HashSet();
+
+    public void addRequestAction(ApprovableRequestAction action){
+        requestActions.add(action);
+        action.setRequest(this);
+    }
 }

@@ -9,6 +9,14 @@ import java.util.Date;
 @Embeddable
 public class RequestDetail {
 
+    public RequestDetail() {
+    }
+
+    public RequestDetail(String user, Date created) {
+        this.user = user;
+        this.created = created;
+    }
+
     @Column(name = "user_name", nullable = false)
     private String user;
 
